@@ -49,23 +49,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
-    <link rel="stylesheet" href="/css/site-ds.css?v=19">
-    <link rel="stylesheet" href="/css/pf-nav.css?v=2">
+    <link rel="stylesheet" href="/css/home-ds.css?v=15">
+    <link rel="stylesheet" href="/css/site-ds.css?v=21">
+    <link rel="stylesheet" href="/css/pf-nav.css?v=4">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     
     <style>
-      .pf-legal .ds-legal-block p, .pf-legal .ds-legal-block li { line-height: 1.65; }
-      .pf-legal .ds-legal-block h2 { scroll-margin-top: 6rem; }
-      .pf-legal .pf-cl { font-weight: 600; color: var(--ds-ink); margin-right: .4em; }
+      .pf-legal .ds-legal-block p, .pf-legal .ds-legal-block li { line-height: 1.65; color: #d9d9e0; }
+      .pf-legal .ds-legal-block h2 { scroll-margin-top: 6rem; color: #f0f0f5; }
+      .pf-legal .pf-cl { font-weight: 600; color: #f0f0f5; margin-right: .4em; }
       .pf-legal .pf-intro { font-size: 1.0625rem; margin: 0 0 2rem; }
-      .pf-legal a:not(.ds-cta) { color: var(--ds-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--ds-orange); }
-      .pf-legal a:not(.ds-cta):hover { color: var(--ds-orange); }
+      .pf-legal a:not(.ds-cta):not(.pf-btn) { color: #f0f0f5; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #FF0257; }
+      .pf-legal a:not(.ds-cta):not(.pf-btn):hover { color: #ff5c8a; }
       .pf-legal .ds-table th, .pf-legal .ds-table td { text-align: left; }
-      .pf-legal .ds-table__head { padding: .875rem 1rem; border-bottom: 2px solid var(--ds-orange); font-weight: 600; color: var(--ds-ink); }
-      .pf-legal .pf-tbc { color: #7a7670; font-style: italic; }
-      .pf-legal .pf-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.4rem; border-radius: 9999px; background: var(--ds-ink); color: #fff; font-weight: 600; font-size: .9375rem; border: none; cursor: pointer; font-family: inherit; }
-      .pf-legal .pf-btn:hover { background: #000; }
+      .pf-legal .ds-table-wrap { border: 1px solid #26262b; border-radius: 14px; overflow: hidden; overflow-x: auto; background: #0c0c0f; }
+      .pf-legal .ds-table tbody tr:last-child .ds-table__cell { border-bottom: none; }
+      .pf-legal .ds-table__head-row { background: #1a1a1e; }
+      .pf-legal .ds-table__head { padding: .875rem 1rem; background: #1a1a1e; border-bottom: 1px solid #26262b; font-weight: 600; color: #f0f0f5; }
+      .pf-legal .ds-table__cell { padding: .875rem 1rem; }
+      .pf-legal .ds-table__cell { color: #d9d9e0; border-bottom: 1px solid #26262b; }
+      .pf-legal .ds-table__row--alt { background: #101014; }
+      .pf-legal .pf-tbc { color: #7c7c86; font-style: italic; }
+      .pf-legal .pf-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.4rem; border-radius: 9999px; background: #FF0257; color: #ffffff; font-weight: 600; font-size: .9375rem; border: none; cursor: pointer; font-family: inherit; transition: background .2s ease; }
+      .pf-legal .pf-btn:hover { background: #d90048; }
+      .pf-legal .pf-btn:focus-visible { outline: 2px solid #ff5c8a; outline-offset: 3px; }
+      .pf-legal .ds-callout.ds-callout--yellow { background: #131316; border: 1px solid #26262b; }
+      .pf-legal .ds-callout h3 { color: #f0f0f5; }
+      .pf-legal .ds-callout p { color: #d9d9e0; }
       .pf-legal .ds-toc h2 { border-bottom: none; margin: 0 0 .75rem; padding: 0; font-size: 1.125rem; }
       .pf-legal .ds-toc ol { columns: 2; column-gap: 2rem; }
       .pf-legal .ds-toc li { break-inside: avoid; margin: 0 0 .3rem; font-size: .95rem; }
@@ -73,13 +83,14 @@
       @media (max-width: 640px) { .pf-legal .ds-toc ol { columns: 1; } }
       .pf-legal .ds-cta-band p a { color: inherit; }
       @media (max-width: 640px) {
+        .pf-legal .ds-table-wrap { border: none; border-radius: 0; background: transparent; overflow: visible; }
         .pf-legal .ds-table { min-width: 0; font-size: .9375rem; }
         .pf-legal .ds-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-        .pf-legal .ds-table tbody tr { display: block; padding: .25rem 0 .75rem; border-bottom: 1px solid var(--ds-border); }
-        .pf-legal .ds-table tbody tr:first-child { border-top: 2px solid var(--ds-orange); }
+        .pf-legal .ds-table tbody tr { display: block; padding: .25rem 0 .75rem; border-bottom: 1px solid #26262b; }
+        .pf-legal .ds-table tbody tr:first-child { border-top: 2px solid #FF0257; }
         .pf-legal .ds-table .ds-table__row--alt { background: transparent; }
         .pf-legal .ds-table .ds-table__cell { display: grid; grid-template-columns: 6.5rem 1fr; gap: .75rem; padding: .5rem 0; border-bottom: none; }
-        .pf-legal .ds-table .ds-table__cell::before { content: attr(data-label); font-size: .75rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #7a7670; padding-top: .15em; }
+        .pf-legal .ds-table .ds-table__cell::before { content: attr(data-label); font-size: .8125rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #a0a0aa; padding-top: .15em; }
       }
     </style>
     <script type="application/ld+json">
@@ -94,7 +105,7 @@
     </script>
 </head>
 <body class="ds-page ds-grain">
-        <nav id="ds-nav" class="hd-nav hd-nav--light" aria-label="Main navigation">
+        <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
         <div class="hd-nav__bar">
             <a href="/" class="hd-nav__brand">
                 <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
@@ -246,7 +257,7 @@
                             <tr><td class="ds-table__cell" data-label="Category">Strictly necessary</td><td class="ds-table__cell" data-label="Name and provider">Security cookies set by our hosting or security provider, if used</td><td class="ds-table__cell" data-label="Purpose">Security and bot protection</td><td class="ds-table__cell" data-label="Duration">Up to 30 minutes</td></tr>
                             <tr class="ds-table__row--alt"><td class="ds-table__cell" data-label="Category">Analytics</td><td class="ds-table__cell" data-label="Name and provider">_ga, _ga_* (Google Analytics 4)</td><td class="ds-table__cell" data-label="Purpose">Counts visits and shows us which pages and features are used</td><td class="ds-table__cell" data-label="Duration">Up to 2 years</td></tr>
                             <tr><td class="ds-table__cell" data-label="Category">Analytics and functionality</td><td class="ds-table__cell" data-label="Name and provider">hubspotutk, __hstc, __hssc, __hssrc (HubSpot)</td><td class="ds-table__cell" data-label="Purpose">Recognises returning visitors and links form submissions to your contact record</td><td class="ds-table__cell" data-label="Duration">Up to 6 months</td></tr>
-                            <tr class="ds-table__row--alt"><td class="ds-table__cell" data-label="Category">Marketing</td><td class="ds-table__cell" data-label="Name and provider">_fbp (Meta Pixel)</td><td class="ds-table__cell" data-label="Purpose">Measures whether our advertising on Meta platforms led to a visit or sign-up</td><td class="ds-table__cell" data-label="Duration">3 months</td></tr>
+                            <tr class="ds-table__row--alt"><td class="ds-table__cell" data-label="Category">Marketing</td><td class="ds-table__cell" data-label="Name and provider">_fbp (Meta Pixel)</td><td class="ds-table__cell" data-label="Purpose">Would measure whether our advertising on Meta platforms led to a visit or sign-up. The pixel script is present but not active: no Pixel ID is configured, so it sets no cookies until one is</td><td class="ds-table__cell" data-label="Duration">3 months (once active)</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -288,17 +299,17 @@
     </div>
 </main>
 
-<footer class="hd-footer hd-footer--light">
+<footer class="hd-footer">
       <div class="hd-wrap">
         <div class="hd-footer__top">
           <div>
             <div class="hd-footer__brand-row">
-              <a href="/" class="hd-footer__brand-link"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" class="hd-footer__brand-logo"></a>
+              <a href="/" class="hd-footer__brand-link"><img src="/images/design/pf-logo-white.svg" alt="PropertyFlow" class="hd-footer__brand-logo"></a>
             </div>
             <p class="hd-footer__desc">The platform for short-term let hosts across the UK. Your channels or PropertyFlow channels, one inbox, one calendar.</p>
             <a href="mailto:info@propertyflow.uk" class="hd-footer__contact">info@propertyflow.uk</a>
             <a href="tel:+442045772084" class="hd-footer__contact">+44 204 577 2084</a>
-            <div class="pf-app-badges" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px"><a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?releaseDate=1784160000" alt="Download on the App Store" style="height:40px;width:auto;display:block"></a><a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="pf-app-badges__play"></a></div>
+            <div class="pf-app-badges" style="display: flex;align-items: center;gap: 10px;flex-wrap: wrap;margin-top: 14px"><a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-gb?releaseDate=1784160000" alt="Download on the App Store" style="height: 40px;width: auto;display: block"></a><a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="pf-app-badges__play"></a></div>
           </div>
           <div class="hd-footer__cols">
             <div>
@@ -362,7 +373,7 @@
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=14"></script>
 <!-- HubSpot Tracking Code -->
-    <script src="/js/cookie-consent.js?v=2"></script>
+    <script src="/js/cookie-consent.js?v=3"></script>
     <script src="/js/meta-pixel.js"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
