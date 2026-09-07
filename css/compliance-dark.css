@@ -1,0 +1,216 @@
+/* ==========================================================================
+   PropertyFlow — Document Reminder (Compliance) page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 595:3852 "Document Reminder")
+
+   Loaded ONLY by platform/compliance/index.html, after home-dark.css (nav,
+   labels, headings, stats grid, CTA2, footer pattern are reused from there).
+   Component classes below use the `dr-` prefix to avoid any collision with
+   home-dark.css or the other redesigned pages' CSS files. Scoped under
+   body.hd-page.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .dr-hero { padding: 160px 0 100px; }
+body.hd-page .dr-hero__copy { max-width: 800px; }
+
+body.hd-page .dr-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.6vw, 71.66px);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .dr-hero__heading > span { display: block; }
+body.hd-page .dr-hero__heading span.muted { color: #87878f; }
+
+body.hd-page .dr-hero__desc {
+  font-family: "Krub", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 24px 0 0;
+}
+
+body.hd-page .dr-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+body.hd-page .dr-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+  max-width: 560px;
+}
+body.hd-page .dr-hero__stat-divider { width: 1px; height: 32px; background: var(--border-subtle); flex-shrink: 0; }
+body.hd-page .dr-hero__stat-value {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  display: block;
+  white-space: nowrap;
+}
+body.hd-page .dr-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
+
+@media (max-width: 640px) {
+  body.hd-page .dr-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
+}
+
+body.hd-page .dr-hero__visual {
+  margin-top: 80px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+}
+body.hd-page .dr-hero__visual img { display: block; width: 100%; }
+
+/* ---------- Shared section header + tile grids ---------- */
+
+body.hd-page .dr-section-head { max-width: 648px; }
+body.hd-page .dr-h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4.1vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .dr-h2 span.muted { color: #87878f; }
+body.hd-page .dr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+
+/* Section 03: two-column layout — head text left, accordion list right
+   (Figma "Frame 2085665272": two 549px columns side by side, 40px gap) */
+body.hd-page .dr-tracked__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+body.hd-page .dr-section-head--tracked { max-width: none; }
+body.hd-page .dr-accordion--tracked { margin-top: 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .dr-tracked__grid { grid-template-columns: 1fr; gap: 0; }
+  body.hd-page .dr-accordion--tracked { margin-top: 56px; }
+}
+
+/* Sections 02 & 03: accordion-style row lists (Figma "Component 60/61/58/59" —
+   regulatory picture — and "Component 64/43/44/61/62" — tracked documents).
+   Each row is a clickable header (.dr-accordion__header, role="button") plus a
+   sibling panel (.dr-accordion__panel) that JS expands/collapses by setting
+   max-height to the panel's scrollHeight — see the inline <script> in
+   platform/compliance/index.html. The expanded copy for the regulatory-picture
+   rows and most tracked-document rows isn't present in the Figma file itself
+   (their "Expand" component variant, where one exists at all, still carries an
+   unrelated placeholder — Figma authoring gap, not something we introduced);
+   this content was supplied directly by the user instead. */
+body.hd-page .dr-accordion { display: flex; flex-direction: column; gap: 8px; margin-top: 56px; }
+body.hd-page .dr-accordion__row {
+  background: #1a1a1e;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+body.hd-page .dr-accordion__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px 16px;
+  cursor: pointer;
+}
+body.hd-page .dr-accordion__header--compact { align-items: center; gap: 8px; }
+body.hd-page .dr-accordion__main { display: flex; flex: 1 0 0; min-width: 0; gap: 12px; align-items: flex-start; }
+body.hd-page .dr-accordion__header--compact .dr-accordion__main { align-items: center; }
+body.hd-page .dr-accordion__icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+body.hd-page .dr-accordion__icon--doc { background: #131316; }
+body.hd-page .dr-accordion__icon--doc img { width: 24px; height: 24px; }
+body.hd-page .dr-accordion__icon--flag img { width: 100%; height: 100%; display: block; object-fit: cover; }
+body.hd-page .dr-accordion__content { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+body.hd-page .dr-accordion__label { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 23px; letter-spacing: -0.005em; color: var(--text-primary); margin: 0; }
+body.hd-page .dr-accordion__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__desc--sm { font-family: "Krub", sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__chevron { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+body.hd-page .dr-accordion__chevron img { width: 14px; height: auto; transition: transform 0.25s ease; }
+body.hd-page .dr-accordion__header[aria-expanded="true"] .dr-accordion__chevron img { transform: rotate(180deg); }
+body.hd-page .dr-accordion__note { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: #ff5a5f; margin: 16px 0 0; }
+
+/* Expand/collapse panel — collapsed via max-height:0 until JS sets an explicit
+   pixel max-height on open (see inline script), so the transition can animate
+   to content of any length without hard-coding a height. */
+body.hd-page .dr-accordion__panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+body.hd-page .dr-accordion__panel-inner { padding: 0 16px 24px 72px; }
+body.hd-page .dr-accordion__panel-inner p { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; margin: 0 0 16px; }
+body.hd-page .dr-accordion__panel-inner p:last-child { margin-bottom: 0; }
+body.hd-page .dr-accordion__list { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+body.hd-page .dr-accordion__list li { position: relative; padding-left: 14px; font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; }
+body.hd-page .dr-accordion__list li::before { content: "*"; position: absolute; left: 0; }
+
+@media (max-width: 640px) {
+  body.hd-page .dr-accordion__header { padding: 18px 14px; gap: 12px; }
+  body.hd-page .dr-accordion__title { font-size: 16px; }
+  body.hd-page .dr-accordion__panel-inner { padding: 0 14px 18px 58px; }
+}
+
+/* Section 04: how it works 3-tile row + partner banner */
+body.hd-page .dr-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  margin-top: 56px;
+  overflow: hidden;
+}
+body.hd-page .dr-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
+body.hd-page .dr-tile:last-child { border-right: none; }
+body.hd-page .dr-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .dr-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .dr-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .dr-tiles { grid-template-columns: 1fr; }
+  body.hd-page .dr-tile { border-right: none; border-bottom: 0.8px solid var(--border-subtle); }
+  body.hd-page .dr-tile:last-child { border-bottom: none; }
+}
+
+body.hd-page .dr-partner-banner {
+  margin-top: 12px;
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+body.hd-page .dr-partner-banner__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary); margin: 0; }
+body.hd-page .dr-partner-banner__desc { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.6; color: var(--link-muted); margin: 16px 0 0; max-width: 455px; }
+
+/* ---------- Stats section (Figma: node 621:5443 "StatsSection", matches H1/Body Large/Body styles) ---------- */
+body.hd-page section.hd-stats .hd-stats__value {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: 0;
+  color: #f0f0f5;
+}
+body.hd-page section.hd-stats .hd-stats__label--lg {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #87878f;
+}
+body.hd-page section.hd-stats .hd-stats__label {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #515159;
+}
