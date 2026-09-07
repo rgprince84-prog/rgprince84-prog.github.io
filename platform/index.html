@@ -24,21 +24,21 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revenue &amp; Reporting | PropertyFlow</title>
-    <meta name="description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
-    <meta property="og:title" content="Revenue &amp; Reporting | PropertyFlow">
-    <meta property="og:description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
+    <title>Platform | PropertyFlow</title>
+    <meta name="description" content="One platform for UK short-term let hosts: channel manager, multi-calendar, unified inbox, AI Cognito Pricing, turnovers, document reminders, reporting and payouts. Free for up to 3 properties on your own channels.">
+    <meta property="og:title" content="Platform | PropertyFlow">
+    <meta property="og:description" content="One platform for UK short-term let hosts: channel manager, multi-calendar, unified inbox, AI Cognito Pricing, turnovers, document reminders, reporting and payouts. Free for up to 3 properties on your own channels.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.propertyflow.uk/platform/revenue-reporting/">
+    <meta property="og:url" content="https://www.propertyflow.uk/platform/">
         <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="canonical" href="https://www.propertyflow.uk/platform/revenue-reporting/">
+    <link rel="canonical" href="https://www.propertyflow.uk/platform/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Revenue &amp; Reporting | PropertyFlow">
-    <meta name="twitter:description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
+    <meta name="twitter:title" content="Platform | PropertyFlow">
+    <meta name="twitter:description" content="One platform for UK short-term let hosts: channel manager, multi-calendar, unified inbox, AI Cognito Pricing, turnovers, document reminders, reporting and payouts. Free for up to 3 properties on your own channels.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -49,7 +49,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/revenue-reporting-dark.css?v=1">
+    <style>
+      /* Platform hub: hero and feature grid (mirrors the multi-calendar hero and tile styles) */
+      body.hd-page .ph-hero { padding: 160px 0 100px; }
+      body.hd-page .ph-hero__copy { max-width: 800px; }
+      body.hd-page .ph-hero__heading { font-family: "Inter", sans-serif; font-weight: 700; font-size: clamp(34px, 5.6vw, 71.66px); line-height: 1.06; letter-spacing: -0.028em; color: var(--text-primary); margin: 28px 0 0; }
+      body.hd-page .ph-hero__heading span { display: block; }
+      body.hd-page .ph-hero__heading span.muted { color: #87878f; }
+      body.hd-page .ph-hero__desc { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-secondary); max-width: 620px; margin: 24px 0 0; }
+      body.hd-page .ph-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+      body.hd-page .ph-section-head { max-width: 648px; }
+      body.hd-page .ph-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+      body.hd-page .ph-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 0.8px solid var(--border-subtle); border-radius: 12px; overflow: hidden; margin-top: 48px; background: var(--bg); }
+      body.hd-page .ph-card { display: flex; flex-direction: column; padding: 36px 28px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); text-decoration: none; color: inherit; transition: background 0.2s ease; }
+      body.hd-page .ph-card:hover, body.hd-page .ph-card:focus-visible { background: var(--sidebar-bg); outline: none; }
+      body.hd-page .ph-card:nth-child(4n) { border-right: none; }
+      body.hd-page .ph-card:nth-last-child(-n+4) { border-bottom: none; }
+      body.hd-page .ph-card__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 20px; }
+      body.hd-page .ph-card__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+      body.hd-page .ph-card__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: #b5b5b5; margin: 0; flex: 1; }
+      body.hd-page .ph-card__more { font-family: "Krub", sans-serif; font-size: 14px; color: var(--text-primary); margin: 20px 0 0; }
+      body.hd-page .hd-cta2__desc a { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+      @media (max-width: 1024px) {
+        body.hd-page .ph-grid { grid-template-columns: repeat(2, 1fr); }
+        body.hd-page .ph-card { border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
+        body.hd-page .ph-card:nth-child(2n) { border-right: none; }
+        body.hd-page .ph-card:nth-last-child(-n+2) { border-bottom: none; }
+      }
+      @media (max-width: 640px) {
+        body.hd-page .ph-grid { grid-template-columns: 1fr; }
+        body.hd-page .ph-card, body.hd-page .ph-card:nth-child(2n), body.hd-page .ph-card:nth-last-child(-n+2) { border-right: none; border-bottom: 0.8px solid var(--border-subtle); }
+        body.hd-page .ph-card:last-child { border-bottom: none; }
+      }
+    </style>
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -58,26 +90,26 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.propertyflow.uk/"},
-        {"@type": "ListItem", "position": 2, "name": "Revenue & Reporting", "item": "https://www.propertyflow.uk/platform/revenue-reporting/"}
+        {"@type": "ListItem", "position": 2, "name": "Platform", "item": "https://www.propertyflow.uk/platform/"}
       ]
     }
     </script>
-    <!-- Schema Markup: Service -->
+    <!-- Schema Markup: ItemList of platform features -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Revenue Reporting for Short-Term Lets",
-      "provider": {
-        "@type": "Organization",
-        "name": "PropertyFlow Technologies Ltd",
-        "url": "https://www.propertyflow.uk"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
-      "description": "Revenue, occupancy, bookings and payouts reported per property and across the whole portfolio."
+      "@type": "ItemList",
+      "name": "PropertyFlow platform features",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Channel Manager", "url": "https://www.propertyflow.uk/platform/channel-management/"},
+        {"@type": "ListItem", "position": 2, "name": "Multi-Calendar", "url": "https://www.propertyflow.uk/platform/multi-calendar/"},
+        {"@type": "ListItem", "position": 3, "name": "Document Reminders", "url": "https://www.propertyflow.uk/platform/compliance/"},
+        {"@type": "ListItem", "position": 4, "name": "AI Cognito Pricing", "url": "https://www.propertyflow.uk/platform/ai-pricing/"},
+        {"@type": "ListItem", "position": 5, "name": "Turnovers & Team", "url": "https://www.propertyflow.uk/platform/turnovers-team/"},
+        {"@type": "ListItem", "position": 6, "name": "Revenue & Reporting", "url": "https://www.propertyflow.uk/platform/revenue-reporting/"},
+        {"@type": "ListItem", "position": 7, "name": "Unified Inbox", "url": "https://www.propertyflow.uk/platform/unified-inbox/"},
+        {"@type": "ListItem", "position": 8, "name": "Financials & Payouts", "url": "https://www.propertyflow.uk/platform/financials/"}
+      ]
     }
     </script>
 
@@ -198,103 +230,89 @@
 <main>
 
     <!-- Hero -->
-    <section class="rr-hero">
+    <section class="ph-hero">
       <div class="hd-wrap">
-        <div class="rr-hero__copy">
-          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Revenue & reporting</span></div>
-          <h1 class="rr-hero__heading"><span>Know how every property </span><span>is performing. <span class="muted">Without </span></span><span class="muted">living in spreadsheets.</span></h1>
-          <p class="rr-hero__desc">Revenue, occupancy, bookings and performance come together in one clear view. See what's working, spot where there's room to improve, and make better decisions without pulling reports together yourself.</p>
-          <div class="rr-hero__ctas">
-            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
-            <a href="#how-it-works" class="hd-pill hd-pill--ghost">See how it works</a>
-          </div>
-          <div class="rr-hero__stats">
-            <div><span class="rr-hero__stat-value">Performance</span><p class="rr-hero__stat-label">spot trends across your portfolio</p></div>
-            <div class="rr-hero__stat-divider"></div>
-            <div><span class="rr-hero__stat-value">Occupancy</span><p class="rr-hero__stat-label">understand how your nights are performing</p></div>
-            <div class="rr-hero__stat-divider"></div>
-            <div><span class="rr-hero__stat-value">Zero</span><p class="rr-hero__stat-label">spreadsheets to build owner reports</p></div>
-          </div>
-        </div>
-        <div class="rr-hero__visual">
-          <img src="/images/design/redesign/revenue-reporting/hero-dashboard.webp" alt="PropertyFlow analytics dashboard showing revenue, occupancy, bookings and payouts">
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="hd-section" id="how-it-works">
-      <div class="hd-wrap">
-        <div class="rr-section-head">
-          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">How it works</span></div>
-          <h2 class="rr-h2">The numbers stay up to date. <span class="muted">Without building another report.</span></h2>
-          <p class="rr-lede">Spend less time pulling numbers together and more time understanding them.<br><br>See revenue, occupancy and booking performance in one place, with the numbers updating as your portfolio moves.</p>
-        </div>
-        <div class="rr-tiles">
-          <div class="rr-tile">
-            <p class="rr-tile__num">01</p>
-            <h3 class="rr-tile__title">Real-time revenue</h3>
-            <p class="rr-tile__desc">Revenue, fees and payouts sync in from every channel the moment a reservation is confirmed. No CSV exports, no copy-pasting between tools.</p>
-          </div>
-          <div class="rr-tile">
-            <p class="rr-tile__num">02</p>
-            <h3 class="rr-tile__title">Performance Analysis</h3>
-            <p class="rr-tile__desc">See individual properties or your whole portfolio in one clear view, so it's easy to understand what's performing well.</p>
-          </div>
-          <div class="rr-tile">
-            <p class="rr-tile__num">03</p>
-            <h3 class="rr-tile__title">Automated Reporting</h3>
-            <p class="rr-tile__desc">Your performance data is already organised and ready to review, making monthly reporting simpler without pulling numbers together from different places.</p>
+        <div class="ph-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Platform</span></div>
+          <h1 class="ph-hero__heading"><span>One platform for</span><span class="muted">the whole job.</span></h1>
+          <p class="ph-hero__desc">Bookings, guest messages, pricing, turnovers, documents and money for UK short-term let hosts, in one place. Connect your own channels, or let us list you on PropertyFlow channels. Free for up to 3 properties on your own channels. No setup fees. No lock-in.</p>
+          <div class="ph-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+            <a href="/pricing/" class="hd-pill hd-pill--ghost">See pricing</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Growing portfolio -->
-    <section class="hd-section">
+    <!-- Feature grid -->
+    <section class="hd-section" id="features">
       <div class="hd-wrap">
-        <div class="rr-section-head">
-          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">Growing portfolio</span></div>
-          <h2 class="rr-h2">From one property <span class="muted">to a growing portfolio</span></h2>
-          <p class="rr-lede">PropertyFlow grows with you. Get the right insight at every stage of your journey</p>
+        <div class="ph-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">What's inside</span></div>
+          <h2 class="hd-h2">Eight tools. <span class="hd-h2--muted-line2">One login.</span></h2>
+          <p class="ph-lede">Everything below is included on every plan, except AI Cognito Pricing, which is on Premium. Pick a feature to see how it works.</p>
         </div>
-        <div class="rr-growth">
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">1 Property</p>
-            <h3 class="rr-growth__title">Get a clear picture from day one.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See bookings and revenue clearly</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Keep performance easy to follow</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Understand how the property is doing at a glance</li>
-            </ul>
-          </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">5 properties</p>
-            <h3 class="rr-growth__title">See what's working across the portfolio.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Compare property performance</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Spot your strongest performers</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See where there's room to improve</li>
-            </ul>
-          </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">10 properties</p>
-            <h3 class="rr-growth__title">Make data-backed decisions</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Track portfolio trends</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Understand occupancy patterns</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Compare revenue across properties</li>
-            </ul>
-          </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">20+ properties</p>
-            <h3 class="rr-growth__title">See the bigger picture as you scale.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See the whole portfolio at a glance</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Spot growth opportunities</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Make decisions with more confidence</li>
-            </ul>
-          </div>
+        <div class="ph-grid">
+          <a href="/platform/channel-management/" class="ph-card">
+            <p class="ph-card__num">01</p>
+            <h3 class="ph-card__title">Channel Manager</h3>
+            <p class="ph-card__desc">Connect your own Airbnb, Booking.com and Vrbo accounts, or let us list you on PropertyFlow channels. One calendar underneath.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/multi-calendar/" class="ph-card">
+            <p class="ph-card__num">02</p>
+            <h3 class="ph-card__title">Multi-Calendar</h3>
+            <p class="ph-card__desc">Every booking, block and gap across every property and channel in a single synced view.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/compliance/" class="ph-card">
+            <p class="ph-card__num">03</p>
+            <h3 class="ph-card__title">Document Reminders</h3>
+            <p class="ph-card__desc">Licences and certificates stored with a renewal date on each, and reminders before expiry. Five UK regimes tracked.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/ai-pricing/" class="ph-card">
+            <p class="ph-card__num">04</p>
+            <h3 class="ph-card__title">AI Cognito Pricing</h3>
+            <p class="ph-card__desc">Nightly rates adjusted for demand, season and local events. Included on Premium.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/turnovers-team/" class="ph-card">
+            <p class="ph-card__num">05</p>
+            <h3 class="ph-card__title">Turnovers &amp; Team</h3>
+            <p class="ph-card__desc">Cleaning and changeover tasks created from bookings and sent to your team the moment guests leave.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/revenue-reporting/" class="ph-card">
+            <p class="ph-card__num">06</p>
+            <h3 class="ph-card__title">Revenue &amp; Reporting</h3>
+            <p class="ph-card__desc">Revenue, occupancy, bookings and payouts, per property and across the portfolio.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/unified-inbox/" class="ph-card">
+            <p class="ph-card__num">07</p>
+            <h3 class="ph-card__title">Unified Inbox</h3>
+            <p class="ph-card__desc">Every guest message from every channel in one thread, with AI messaging and automated guest messages.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+          <a href="/platform/financials/" class="ph-card">
+            <p class="ph-card__num">08</p>
+            <h3 class="ph-card__title">Financials &amp; Payouts</h3>
+            <p class="ph-card__desc">Owner statements, payout tracking and expenses tied to each stay.</p>
+            <p class="ph-card__more">Explore →</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="hd-stats">
+      <div class="hd-wrap">
+        <div class="hd-stats__grid">
+          <div class="hd-stats__cell"><span class="hd-stats__value">150+</span><p class="hd-stats__label">properties live</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">1,500</span><p class="hd-stats__label">bookings a month</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">6,000+</span><p class="hd-stats__label">bookings processed</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">8+</span><p class="hd-stats__label">booking channels</p></div>
         </div>
       </div>
     </section>
@@ -302,10 +320,11 @@
     <!-- Final CTA -->
     <section class="hd-section hd-cta2">
       <div class="hd-wrap hd-cta2__inner" style="max-width:900px;">
-        <h2 class="hd-cta2__heading">Clear numbers. <span class="hd-h2--muted-line2">Informed decision.</span></h2>
-        <p class="hd-cta2__desc">Included on every plan. Free for up to 3 properties on your own channels. No card required.</p>
+        <h2 class="hd-cta2__heading">Start on your own channels.<br><span class="hd-h2--muted-line2">Add PropertyFlow channels when you want more bookings.</span></h2>
+        <p class="hd-cta2__desc">Free for up to 3 properties on your own channels. No setup fees. No lock-in. No credit card required.</p>
+        <p class="hd-cta2__desc">Run it from your phone. Booking alerts and guest messages on the PropertyFlow app for <a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer">iPhone</a> and <a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer">Android</a>.</p>
         <div class="hd-cta2__actions">
-          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
           <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
         </div>
       </div>

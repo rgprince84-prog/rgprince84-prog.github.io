@@ -24,21 +24,21 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revenue &amp; Reporting | PropertyFlow</title>
-    <meta name="description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
-    <meta property="og:title" content="Revenue &amp; Reporting | PropertyFlow">
-    <meta property="og:description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
+    <title>Financials &amp; Payouts | PropertyFlow</title>
+    <meta name="description" content="Owner statements, payout tracking and expenses tied to each stay, tallied as bookings happen. Month-end stops being a project.">
+    <meta property="og:title" content="Financials &amp; Payouts | PropertyFlow">
+    <meta property="og:description" content="Owner statements, payout tracking and expenses tied to each stay, tallied as bookings happen. Month-end stops being a project.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.propertyflow.uk/platform/revenue-reporting/">
+    <meta property="og:url" content="https://www.propertyflow.uk/platform/financials/">
         <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="canonical" href="https://www.propertyflow.uk/platform/revenue-reporting/">
+    <link rel="canonical" href="https://www.propertyflow.uk/platform/financials/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Revenue &amp; Reporting | PropertyFlow">
-    <meta name="twitter:description" content="Revenue, occupancy, bookings and payouts, per property and across the portfolio, in numbers you can act on, not a spreadsheet you have to build.">
+    <meta name="twitter:title" content="Financials &amp; Payouts | PropertyFlow">
+    <meta name="twitter:description" content="Owner statements, payout tracking and expenses tied to each stay, tallied as bookings happen. Month-end stops being a project.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -49,7 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/revenue-reporting-dark.css?v=1">
+    <link rel="stylesheet" href="/css/financials-xero-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -58,7 +58,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.propertyflow.uk/"},
-        {"@type": "ListItem", "position": 2, "name": "Revenue & Reporting", "item": "https://www.propertyflow.uk/platform/revenue-reporting/"}
+        {"@type": "ListItem", "position": 2, "name": "Financials & Payouts", "item": "https://www.propertyflow.uk/platform/financials/"}
       ]
     }
     </script>
@@ -67,7 +67,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Revenue Reporting for Short-Term Lets",
+      "name": "Financials and Payouts for Short-Term Lets",
       "provider": {
         "@type": "Organization",
         "name": "PropertyFlow Technologies Ltd",
@@ -77,7 +77,7 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "description": "Revenue, occupancy, bookings and payouts reported per property and across the whole portfolio."
+      "description": "Owner statements, payout tracking and expenses tied to each stay, tallied automatically as bookings happen."
     }
     </script>
 
@@ -198,114 +198,108 @@
 <main>
 
     <!-- Hero -->
-    <section class="rr-hero">
+    <section class="fin-hero">
       <div class="hd-wrap">
-        <div class="rr-hero__copy">
-          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Revenue & reporting</span></div>
-          <h1 class="rr-hero__heading"><span>Know how every property </span><span>is performing. <span class="muted">Without </span></span><span class="muted">living in spreadsheets.</span></h1>
-          <p class="rr-hero__desc">Revenue, occupancy, bookings and performance come together in one clear view. See what's working, spot where there's room to improve, and make better decisions without pulling reports together yourself.</p>
-          <div class="rr-hero__ctas">
-            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+        <div class="fin-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Financials &amp; payouts</span></div>
+          <h1 class="fin-hero__heading"><span>Your financials stay </span><span>organised, <span class="muted">even when </span></span><span class="muted">bookings move fast.</span></h1>
+          <p class="fin-hero__desc">As your portfolio grows, keeping track of every payout and booking gets harder. PropertyFlow keeps the financial side organised in one place so you're not untangling everything at the end of the month.</p>
+          <div class="fin-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
             <a href="#how-it-works" class="hd-pill hd-pill--ghost">See how it works</a>
           </div>
-          <div class="rr-hero__stats">
-            <div><span class="rr-hero__stat-value">Performance</span><p class="rr-hero__stat-label">spot trends across your portfolio</p></div>
-            <div class="rr-hero__stat-divider"></div>
-            <div><span class="rr-hero__stat-value">Occupancy</span><p class="rr-hero__stat-label">understand how your nights are performing</p></div>
-            <div class="rr-hero__stat-divider"></div>
-            <div><span class="rr-hero__stat-value">Zero</span><p class="rr-hero__stat-label">spreadsheets to build owner reports</p></div>
+          <div class="fin-hero__stats">
+            <div><span class="fin-hero__stat-value">Statements</span><p class="fin-hero__stat-label">one per property, built from real bookings</p></div>
+            <div class="fin-hero__stat-divider"></div>
+            <div><span class="fin-hero__stat-value">Payouts</span><p class="fin-hero__stat-label">tracked per channel and per stay</p></div>
+            <div class="fin-hero__stat-divider"></div>
+            <div><span class="fin-hero__stat-value">Expenses</span><p class="fin-hero__stat-label">tied to the stay that caused them</p></div>
           </div>
         </div>
-        <div class="rr-hero__visual">
-          <img src="/images/design/redesign/revenue-reporting/hero-dashboard.webp" alt="PropertyFlow analytics dashboard showing revenue, occupancy, bookings and payouts">
+        <div class="fin-hero__visual">
+          <img src="/images/design/redesign/financials-xero/hero-dashboard.webp" alt="PropertyFlow financials dashboard showing reconciled totals, owner payouts due and channel payouts matched to bookings">
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- Three things you stop doing -->
     <section class="hd-section" id="how-it-works">
       <div class="hd-wrap">
-        <div class="rr-section-head">
-          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">How it works</span></div>
-          <h2 class="rr-h2">The numbers stay up to date. <span class="muted">Without building another report.</span></h2>
-          <p class="rr-lede">Spend less time pulling numbers together and more time understanding them.<br><br>See revenue, occupancy and booking performance in one place, with the numbers updating as your portfolio moves.</p>
+        <div class="fin-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Three things you stop doing</span></div>
+          <h2 class="fin-h2">Nobody builds a statement. <span class="muted">Nobody re-types a payout.</span></h2>
+          <p class="fin-lede">Every payout, expense and statement tied to the stay it belongs to.</p>
         </div>
-        <div class="rr-tiles">
-          <div class="rr-tile">
-            <p class="rr-tile__num">01</p>
-            <h3 class="rr-tile__title">Real-time revenue</h3>
-            <p class="rr-tile__desc">Revenue, fees and payouts sync in from every channel the moment a reservation is confirmed. No CSV exports, no copy-pasting between tools.</p>
+        <div class="fin-tiles">
+          <div class="fin-tile">
+            <p class="fin-tile__num">01</p>
+            <h3 class="fin-tile__title">Owner statements</h3>
+            <p class="fin-tile__desc">Each property gets its own owner statement, built from the bookings and costs that actually happened. Never a shared template with the wrong numbers in it.</p>
           </div>
-          <div class="rr-tile">
-            <p class="rr-tile__num">02</p>
-            <h3 class="rr-tile__title">Performance Analysis</h3>
-            <p class="rr-tile__desc">See individual properties or your whole portfolio in one clear view, so it's easy to understand what's performing well.</p>
+          <div class="fin-tile">
+            <p class="fin-tile__num">02</p>
+            <h3 class="fin-tile__title">Payout tracking</h3>
+            <p class="fin-tile__desc">Every channel payout is logged against the stays it covers, so you can see what has been paid, what is still pending and what each booking actually netted.</p>
           </div>
-          <div class="rr-tile">
-            <p class="rr-tile__num">03</p>
-            <h3 class="rr-tile__title">Automated Reporting</h3>
-            <p class="rr-tile__desc">Your performance data is already organised and ready to review, making monthly reporting simpler without pulling numbers together from different places.</p>
+          <div class="fin-tile">
+            <p class="fin-tile__num">03</p>
+            <h3 class="fin-tile__title">Expenses tied to stays</h3>
+            <p class="fin-tile__desc">A cleaning bill or a channel fee is attached to the stay that caused it, instead of sitting in a folder waiting to be matched up by hand.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Growing portfolio -->
+    <!-- Every source of money reconciled -->
     <section class="hd-section">
       <div class="hd-wrap">
-        <div class="rr-section-head">
-          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">Growing portfolio</span></div>
-          <h2 class="rr-h2">From one property <span class="muted">to a growing portfolio</span></h2>
-          <p class="rr-lede">PropertyFlow grows with you. Get the right insight at every stage of your journey</p>
+        <div class="fin-section-head--center">
+          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">Every payout in one place</span></div>
+          <h2 class="fin-h2">Every payout and cost, <span class="muted">in one place.</span></h2>
+          <p class="fin-lede">Channel payouts and supplier costs sit alongside the bookings they belong to, so your records are easy to check, understand and keep up to date.</p>
         </div>
-        <div class="rr-growth">
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">1 Property</p>
-            <h3 class="rr-growth__title">Get a clear picture from day one.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See bookings and revenue clearly</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Keep performance easy to follow</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Understand how the property is doing at a glance</li>
-            </ul>
+        <div class="fin-integrations">
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/hopper.svg" alt=""></span>
+            <div><p class="fin-integration__name">Hopper</p><p class="fin-integration__sub">Payouts</p></div>
           </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">5 properties</p>
-            <h3 class="rr-growth__title">See what's working across the portfolio.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Compare property performance</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Spot your strongest performers</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See where there's room to improve</li>
-            </ul>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/airbnb.svg" alt=""></span>
+            <div><p class="fin-integration__name">Airbnb</p><p class="fin-integration__sub">Payouts</p></div>
           </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">10 properties</p>
-            <h3 class="rr-growth__title">Make data-backed decisions</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Track portfolio trends</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Understand occupancy patterns</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Compare revenue across properties</li>
-            </ul>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/booking.svg" alt=""></span>
+            <div><p class="fin-integration__name">Booking.com</p><p class="fin-integration__sub">Payouts</p></div>
           </div>
-          <div class="rr-growth__cell">
-            <p class="rr-growth__tag">20+ properties</p>
-            <h3 class="rr-growth__title">See the bigger picture as you scale.</h3>
-            <ul class="rr-growth__list">
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">See the whole portfolio at a glance</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Spot growth opportunities</li>
-              <li><img src="/images/design/redesign/revenue-reporting/icon-tick.svg" alt="">Make decisions with more confidence</li>
-            </ul>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/suppliers.svg" alt=""></span>
+            <div><p class="fin-integration__name">Suppliers</p><p class="fin-integration__sub">Cleaning & linen bills</p></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Month-end made easier -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="fin-section-head">
+          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Month-end, made easier</span></div>
+          <h2 class="fin-h2">A little less to sort out at <span class="muted">the end of every month.</span></h2>
+          <p class="fin-lede">As bookings, payouts and costs come in, PropertyFlow keeps them connected and organised so there's less to untangle when month-end comes around.</p>
+        </div>
+        <div class="fin-compare-chart">
+          <img src="/images/design/redesign/financials-xero/compare-chart.webp" alt="Comparison chart showing workload spiking at month-end without PropertyFlow, versus staying level throughout the month with PropertyFlow">
         </div>
       </div>
     </section>
 
     <!-- Final CTA -->
     <section class="hd-section hd-cta2">
-      <div class="hd-wrap hd-cta2__inner" style="max-width:900px;">
-        <h2 class="hd-cta2__heading">Clear numbers. <span class="hd-h2--muted-line2">Informed decision.</span></h2>
-        <p class="hd-cta2__desc">Included on every plan. Free for up to 3 properties on your own channels. No card required.</p>
+      <div class="hd-wrap hd-cta2__inner" style="max-width:950px;">
+        <h2 class="hd-cta2__heading">Spend less time sorting numbers.<br><span class="hd-h2--muted-line2">More time growing your portfolio</span></h2>
+        <p class="hd-cta2__desc">Included on every plan. Free for up to 3 properties on your own channels. No credit card required.</p>
         <div class="hd-cta2__actions">
-          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
           <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
         </div>
       </div>
