@@ -8,6 +8,7 @@
     <script>
       /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
       (function () {
+        if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
         function loadGA() {
           if (window.__pfGA) return; window.__pfGA = true;
           var s = document.createElement('script'); s.async = true;
