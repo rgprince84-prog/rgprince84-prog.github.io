@@ -21,6 +21,7 @@
  *   - Conversions API needs a server (the app backend or a CAPI gateway)
  */
 (function () {
+  if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
   'use strict';
 
   var PIXEL_ID = ''; // ← PASTE META PIXEL ID HERE (e.g. '1234567890123456')
