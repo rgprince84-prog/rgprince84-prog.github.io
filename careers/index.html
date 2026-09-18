@@ -4,10 +4,13 @@
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
 
+    <!-- Google Tag Manager — consent-gated loader + Consent Mode v2 (js/gtm.js); included BEFORE the GA4 loader on purpose -->
+    <script src="/js/gtm.js?v=2"></script>
     <!-- Google tag (gtag.js) -->
     <script>
       /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
       (function () {
+        if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
         function loadGA() {
           if (window.__pfGA) return; window.__pfGA = true;
           var s = document.createElement('script'); s.async = true;
@@ -24,9 +27,9 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Marketing, design and business development, in Edinburgh and remote.">
+    <meta name="description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Design and portfolio management, remote and across the UK.">
     <meta property="og:title" content="Careers at PropertyFlow">
-    <meta property="og:description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Marketing, design and business development, in Edinburgh and remote.">
+    <meta property="og:description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Design and portfolio management, remote and across the UK.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/careers/">
         <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -37,7 +40,7 @@
     <link rel="canonical" href="https://www.propertyflow.uk/careers/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Careers at PropertyFlow">
-    <meta name="twitter:description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Marketing, design and business development, in Edinburgh and remote.">
+    <meta name="twitter:description" content="Open roles at PropertyFlow, the short let management platform for UK hosts. Design and portfolio management, remote and across the UK.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -229,34 +232,10 @@
         <p class="ds-section__lead">To apply, email your CV and a short note on why you want this role to <a href="mailto:careers@propertyflow.uk">careers@propertyflow.uk</a>, with the role in the subject line. We reply to every application.</p>
         <div class="pf-roles">
             <article class="pf-role-card">
-                <h3 class="pf-role-card__title"><a href="/careers/marketing-lead/">Marketing Lead</a></h3>
-                <p class="pf-role-card__location">Remote</p>
-                <p class="pf-role-card__summary">Own marketing end to end for a UK short let software product: paid acquisition, content, brand and a small in house team.</p>
-                <a class="pf-role-card__cta" href="/careers/marketing-lead/">View role</a>
-            </article>
-            <article class="pf-role-card">
-                <h3 class="pf-role-card__title"><a href="/careers/performance-marketer/">Performance Marketer</a></h3>
-                <p class="pf-role-card__location">Remote</p>
-                <p class="pf-role-card__summary">Run paid acquisition across Google, Meta and the app stores on a tight budget, and prove what every pound returned.</p>
-                <a class="pf-role-card__cta" href="/careers/performance-marketer/">View role</a>
-            </article>
-            <article class="pf-role-card">
-                <h3 class="pf-role-card__title"><a href="/careers/content-and-social-executive/">Content and Social Executive</a></h3>
-                <p class="pf-role-card__location">Remote</p>
-                <p class="pf-role-card__summary">Write and publish everything that makes PropertyFlow findable and credible to UK hosts: comparison pages, SEO, social, video and the podcast.</p>
-                <a class="pf-role-card__cta" href="/careers/content-and-social-executive/">View role</a>
-            </article>
-            <article class="pf-role-card">
                 <h3 class="pf-role-card__title"><a href="/careers/graphic-and-web-designer/">Graphic and Web Designer</a></h3>
                 <p class="pf-role-card__location">Remote</p>
                 <p class="pf-role-card__summary">Design the ad creative, the landing pages and the app store presence, and build the pages you design.</p>
                 <a class="pf-role-card__cta" href="/careers/graphic-and-web-designer/">View role</a>
-            </article>
-            <article class="pf-role-card">
-                <h3 class="pf-role-card__title"><a href="/careers/business-development-manager/">Business Development Manager</a></h3>
-                <p class="pf-role-card__location">Edinburgh, full time in the office</p>
-                <p class="pf-role-card__summary">Close properties alongside our Partners and directly, and make our Partners better at closing while you do it.</p>
-                <a class="pf-role-card__cta" href="/careers/business-development-manager/">View role</a>
             </article>
             <article class="pf-role-card">
                 <h3 class="pf-role-card__title"><a href="mailto:careers@propertyflow.uk?subject=Portfolio%20Manager">Portfolio Manager</a></h3>
@@ -343,8 +322,9 @@
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=14"></script>
 <!-- HubSpot Tracking Code -->
-<script src="/js/cookie-consent.js?v=3"></script>
+<script src="/js/cookie-consent.js?v=5"></script>
     <script src="/js/meta-pixel.js"></script>
+    <script src="/js/analytics.js?v=3"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
 </html>
