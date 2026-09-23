@@ -4,10 +4,13 @@
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
 
+    <!-- Google Tag Manager — consent-gated loader + Consent Mode v2 (js/gtm.js); included BEFORE the GA4 loader on purpose -->
+    <script src="/js/gtm.js?v=2"></script>
     <!-- Google tag (gtag.js) -->
     <script>
       /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
       (function () {
+        if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
         function loadGA() {
           if (window.__pfGA) return; window.__pfGA = true;
           var s = document.createElement('script'); s.async = true;
@@ -25,9 +28,9 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Cognito Pricing for Short-Term Lets | PropertyFlow</title>
-    <meta name="description" content="AI Cognito Pricing sets nightly rates for demand, local events, season and booking pace. Included on Premium at £9.99 per property per month plus VAT.">
+    <meta name="description" content="AI Cognito Pricing sets nightly rates for demand, local events, season and booking pace. An add-on at £9.99 per property per month plus VAT, on the properties you switch it on for.">
     <meta property="og:title" content="AI Cognito Pricing | PropertyFlow">
-    <meta property="og:description" content="Nightly rates that move with demand, local events, season and booking pace. Included on Premium.">
+    <meta property="og:description" content="Nightly rates that move with demand, local events, season and booking pace. An add-on, switched on per property.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/platform/ai-pricing/">
         <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -38,7 +41,7 @@
     <link rel="canonical" href="https://www.propertyflow.uk/platform/ai-pricing/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Cognito Pricing | PropertyFlow">
-    <meta name="twitter:description" content="Nightly rates that move with demand, local events, season and booking pace. Included on Premium.">
+    <meta name="twitter:description" content="Nightly rates that move with demand, local events, season and booking pace. An add-on, switched on per property.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -49,7 +52,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Outfit:wght@400;500;600&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=21">
     <link rel="stylesheet" href="/css/pf-nav.css?v=5">
-    <link rel="stylesheet" href="/css/home-dark.css?v=9">
+    <link rel="stylesheet" href="/css/home-dark.css?v=11">
     <link rel="stylesheet" href="/css/ai-pricing-dark.css?v=4">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
@@ -78,7 +81,7 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "description": "AI Cognito Pricing sets nightly rates for short-term lets from demand, local events, seasonality, booking pace and local availability. Included on PropertyFlow Premium."
+      "description": "AI Cognito Pricing sets nightly rates for short-term lets from demand, local events, seasonality, booking pace and local availability. An add-on at £9.99 per property per month plus VAT, on the properties you switch it on for."
     }
     </script>
 
@@ -205,9 +208,9 @@
           <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">AI Cognito Pricing</span></div>
           <h1 class="aip-hero__heading"><span>Automated pricing</span><span class="muted">optimisation</span></h1>
           <p class="aip-hero__desc">PropertyFlow analyses demand, booking trends, seasonality and local events to help optimise your rates automatically. No more constantly checking rates.</p>
-          <p class="aip-hero__desc">Stay ahead of changing demand with intelligent pricing that continuously adapts across your portfolio.</p>
+          <p class="aip-hero__desc">Stay ahead of changing demand with intelligent pricing that continuously adapts on every property you switch it on for.</p>
           <div class="aip-hero__ctas">
-            <a href="/pricing/" class="hd-pill hd-pill--light">See it on Premium →</a>
+            <a href="/pricing/" class="hd-pill hd-pill--light">See add-on pricing →</a>
             <a href="#how-pricing-adapts" class="hd-pill hd-pill--ghost">See it in action</a>
           </div>
         </div>
@@ -304,7 +307,7 @@
                 <span class="aip-timeline__price">£89</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/weekend-street.webp" data-tag="Weekend" data-caption="Friday–Sunday nights run hotter.">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/weekend-street.webp" data-tag="Weekend" data-caption="Friday to Sunday nights run hotter.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">21 days before</p><p class="aip-timeline__title">Weekend uplift applied</p><span class="aip-timeline__tag">Weekend</span></div>
@@ -380,7 +383,7 @@
           <div class="aip-box-cell aip-day__cell">
             <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>7:14 am</span></div>
             <h3 class="aip-day__heading">Pricing optimised before the day begins.</h3>
-            <p class="aip-day__desc">While you sleep, AI Cognito Pricing reviews demand, local events, booking trends and market conditions, adjusting your rates so your portfolio starts every day competitively priced.</p>
+            <p class="aip-day__desc">While you sleep, AI Cognito Pricing reviews demand, local events, booking trends and market conditions, adjusting rates on every property you have switched it on for, so each one starts the day competitively priced.</p>
             <div class="aip-day__card">
               <div class="aip-day__card-head"><span>Overnight pricing pass</span><span>Complete ✓</span></div>
               <div class="aip-prop-row"><div><p class="aip-prop-row__name">Leith Walk Flat</p><p class="aip-prop-row__city">Edinburgh</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£172</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£196</span><span class="aip-prop-row__delta">+£24</span></div></div>
@@ -500,10 +503,10 @@
         <h2 class="hd-cta2__heading">Better pricing shouldn't<br><span class="hd-h2--muted-line2">mean more work.</span></h2>
         <p class="hd-cta2__desc">PropertyFlow keeps your rates responsive in the background, so you can spend less time adjusting prices and more time growing your portfolio.</p>
         <div class="hd-cta2__actions">
-          <a href="/pricing/" class="hd-pill hd-pill--light">See it on Premium →</a>
+          <a href="/pricing/" class="hd-pill hd-pill--light">See add-on pricing →</a>
           <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
         </div>
-        <p class="hd-cta2__footnote">Included on Premium. £9.99 per property per month plus VAT, on every property including the first three.</p>
+        <p class="hd-cta2__footnote">An add-on: £9.99 per property per month plus VAT, on the properties you switch it on for.</p>
       </div>
     </section>
 
@@ -580,7 +583,7 @@
       </div>
     </footer>
 <script src="/js/nav-dropdown.js"></script>
-<script src="/js/propertyflow.js?v=14"></script>
+<script src="/js/propertyflow.js?v=15"></script>
 <script>
 (function () {
   var rows = document.querySelectorAll('.aip-timeline__row');
@@ -606,8 +609,9 @@
 })();
 </script>
 <!-- HubSpot Tracking Code -->
-<script src="/js/cookie-consent.js?v=3"></script>
+<script src="/js/cookie-consent.js?v=5"></script>
     <script src="/js/meta-pixel.js"></script>
+    <script src="/js/analytics.js?v=3"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
 </html>

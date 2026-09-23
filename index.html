@@ -3,11 +3,20 @@
 <head>
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
+    <!-- Meta (Facebook) domain verification. Required for Aggregated Event
+         Measurement — without a verified domain the eight prioritised
+         conversion events cannot be configured and iOS attribution stays
+         degraded. Must remain in the STATIC head: Meta rejects it if the tag
+         is injected by JavaScript. -->
+    <meta name="facebook-domain-verification" content="mgbygqhsganeq6kb4tiys0vw1nei5n" />
 
+    <!-- Google Tag Manager — consent-gated loader + Consent Mode v2 (js/gtm.js); included BEFORE the GA4 loader on purpose -->
+    <script src="/js/gtm.js?v=2"></script>
     <!-- Google tag (gtag.js) -->
     <script>
       /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
       (function () {
+        if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
         function loadGA() {
           if (window.__pfGA) return; window.__pfGA = true;
           var s = document.createElement('script'); s.async = true;
@@ -24,16 +33,16 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Short-term let software for UK hosts. Free for up to 3 properties on your own channels. AI Cognito Pricing on Premium, £9.99 per property per month plus VAT. Start free.">
+    <meta name="description" content="Short-term let software for UK hosts. Connect your own Airbnb and Booking.com free: 0% commission, as many properties as you want. AI Cognito Pricing £9.99 per property per month plus VAT. PropertyFlow channels 5% plus VAT per booking.">
     <meta name="author" content="PropertyFlow Technologies Ltd">
     <meta property="og:title" content="PropertyFlow | One platform to run your short-term lets">
-    <meta property="og:description" content="Short-term let software for UK hosts. Free for up to 3 properties on your own channels. AI Cognito Pricing on Premium, £9.99 per property per month plus VAT. Start free.">
+    <meta property="og:description" content="Short-term let software for UK hosts. Connect your own Airbnb and Booking.com free: 0% commission, as many properties as you want. AI Cognito Pricing £9.99 per property per month plus VAT. PropertyFlow channels 5% plus VAT per booking.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/">
     <link rel="canonical" href="https://www.propertyflow.uk/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PropertyFlow | One platform to run your short-term lets">
-    <meta name="twitter:description" content="Short-term let software for UK hosts. Free for up to 3 properties on your own channels. AI Cognito Pricing on Premium, £9.99 per property per month plus VAT. Start free.">
+    <meta name="twitter:description" content="Short-term let software for UK hosts. Connect your own Airbnb and Booking.com free: 0% commission, as many properties as you want. AI Cognito Pricing £9.99 per property per month plus VAT. PropertyFlow channels 5% plus VAT per booking.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -90,7 +99,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Outfit:wght@500&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=21">
     <link rel="stylesheet" href="/css/pf-nav.css?v=5">
-    <link rel="stylesheet" href="/css/home-dark.css?v=9">
+    <link rel="stylesheet" href="/css/home-dark.css?v=11">
     <style>
       /* Home-only additions: app block, PropertyFlow channels block, Partner steps */
       body.hd-page .hd-app__inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
@@ -159,7 +168,7 @@
       "@type": "LocalBusiness",
       "name": "PropertyFlow Technologies Ltd",
       "image": "https://www.propertyflow.uk/images/og-default.webp",
-      "description": "The property management platform for short-term let hosts. Free for up to 3 properties on your own channels. Premium at £9.99 per property per month plus VAT unlocks AI Cognito Pricing. PropertyFlow channels: 5% plus VAT of each booking we bring.",
+      "description": "The property management platform for short-term let hosts. Connect your own Airbnb and Booking.com free, with 0% commission and as many properties as you want. AI Cognito Pricing £9.99 per property per month plus VAT. PropertyFlow channels: 5% plus VAT of each booking we bring.",
       "url": "https://www.propertyflow.uk",
       "telephone": "+442045772084",
       "email": "info@propertyflow.uk",
@@ -174,7 +183,7 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "priceRange": "Free for up to 3 properties on your own channels; Premium £9.99 per property per month plus VAT; PropertyFlow channels 5% plus VAT per booking",
+      "priceRange": "Free on your own Airbnb and Booking.com accounts with as many properties as you want; AI Cognito Pricing £9.99 per property per month plus VAT; PropertyFlow channels 5% plus VAT per booking",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -192,13 +201,13 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What's included in PropertyFlow's free plan, and how does pricing work?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Free for up to 3 properties on your own channels: connect your Airbnb, Booking.com and Vrbo accounts, one inbox, one calendar, AI messaging, reminders. AI Cognito Pricing is on Premium."}
+          "name": "What's included free on PropertyFlow, and how does pricing work?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Free on your own Airbnb and Booking.com accounts, with as many properties as you want: one inbox, one calendar, AI messaging, automated guest messages, turnover tasks, reminders and reporting. You only pay for what you switch on: AI Cognito Pricing at £9.99 per property per month plus VAT, and 5% plus VAT on bookings from channels we list you on, including a Booking.com listing we create for you."}
         },
         {
           "@type": "Question",
-          "name": "What happens when I add more than 3 properties?",
-          "acceptedAnswer": {"@type": "Answer", "text": "A fourth property moves your account to Premium: £9.99 per property per month plus VAT on every property, so four properties is £39.96 plus VAT, with AI Cognito Pricing included."}
+          "name": "Do I pay per property?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Not for the platform. Every property on your own Airbnb and Booking.com accounts is free. The only per-property charge is AI Cognito Pricing, £9.99 per property per month plus VAT, and only on the properties you switch it on for."}
         },
         {
           "@type": "Question",
@@ -370,7 +379,7 @@
         </div>
 
         <div class="logo-strip">
-          <p class="logo-strip__label">Listing across 8+ channels from day one</p>
+          <p class="logo-strip__label">Your own Airbnb and Booking.com, plus PropertyFlow channels when you want them</p>
           <div class="logo-strip__grid">
             <div class="logo-strip__cell">
               <img class="logo-strip__logo" src="/images/design/redesign/hero/logo-airbnb.webp" alt="Airbnb" />
@@ -565,39 +574,32 @@
       <div class="hd-wrap hd-pricing__head">
         <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Pricing</span></div>
         <h2 class="hd-h2">Start free. Scale on your terms.</h2>
-        <p class="hd-pricing__sub">No setup fees. No lock-in. Move between plans at any time.</p>
+        <p class="hd-pricing__sub">No setup fees. No lock-in. Switch add-ons on or off at any time.</p>
         <div class="hd-pricing__grid">
           <div class="hd-plan">
             <p class="hd-plan__label">Free</p>
             <p class="hd-plan__price">£0</p>
-            <p class="hd-plan__price-sub">Your channels</p>
-            <p class="hd-plan__desc">Free for up to 3 properties. Connect your own Airbnb, Booking.com, Vrbo and other accounts. Unified inbox and calendar, AI messaging, automated guest messages, turnover tasks, document reminders, reporting. AI Cognito Pricing not included. No card required.</p>
-            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--ghost">Start for free</a>
+            <p class="hd-plan__price-sub">Connect your own Airbnb and Booking.com for free</p>
+            <p class="hd-plan__desc">Run your portfolio on your own Airbnb and Booking.com accounts at no cost. You only pay for what you switch on.</p>
+            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Get started free</a>
             <hr class="hd-plan__divider">
             <ul class="hd-plan__features">
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Up to 3 properties on your own channels</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Connect your own Airbnb, Booking.com, Vrbo and other accounts</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified inbox and calendar</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI messaging</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated guest messages</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Turnover tasks</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Document reminders</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Reporting</li>
-              <li class="hd-plan__feature--excluded"><img src="/images/design/redesign/comparision/icon-minus.svg" alt="">AI Cognito Pricing not included</li>
-            </ul>
-          </div>
-          <div class="hd-plan hd-plan--featured">
-            <span class="hd-plan__badge">Recommended</span>
-            <p class="hd-plan__label">Premium</p>
-            <p class="hd-plan__price">£9.99 <span class="hd-plan__price-note">plus VAT</span></p>
-            <p class="hd-plan__price-sub">per property per month, on every property including the first three</p>
-            <p class="hd-plan__desc">Everything in Free plus AI Cognito Pricing and unlimited properties. Four properties: £39.96 plus VAT a month.</p>
-            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Get started</a>
-            <hr class="hd-plan__divider">
-            <ul class="hd-plan__features">
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Everything in Free</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">AI Cognito Pricing</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Unlimited properties</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Your own Airbnb account, 0% commission on every booking</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Your own Booking.com account, 0% commission on every booking</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified inbox and calendar</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI messaging</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated guest messages</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Turnover tasks</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Document reminders</li>
+            <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Reporting</li>
+            <li class="hd-plan__feature--priced">
+              <span class="hd-plan__feature-left"><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI Cognito Pricing, when you switch it on</span>
+              <span class="hd-plan__feature-amount">£9.99<em>per property per month plus VAT</em></span>
+            </li>
+            <li class="hd-plan__feature--priced">
+              <span class="hd-plan__feature-left"><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">PropertyFlow channels, including a Booking.com listing we create for you if you do not have one, when you switch them on</span>
+              <span class="hd-plan__feature-amount">5%<em>of the booking plus VAT</em></span>
+            </li>
             </ul>
           </div>
           <div class="hd-plan">
@@ -627,12 +629,12 @@
             <p class="hd-plan__price-sub">of each booking we bring</p>
           </div>
           <div>
-            <p class="hd-plan__desc">We list your property on the channels you are not on. 5% plus VAT of each booking we bring, on top of that channel's own commission at cost. Bookings through your own Airbnb account: 0%. Available on Free and Premium. Switch back to your own channels any time.</p>
+            <p class="hd-plan__desc">We list your property on the channels you are not on, such as Vrbo and Agoda, using our own accounts, and create a Booking.com listing for you if you do not have one. 5% plus VAT of each booking we bring, on top of that channel's own commission at cost. Bookings through your own accounts: 0%. Switch these channels off whenever you like.</p>
             <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--ghost">Get started free</a>
           </div>
         </div>
-        <p class="hd-pricing__footnote">All prices exclude VAT. VAT is added at the standard rate once our registration is confirmed.</p>
-        <p class="hd-pricing__footnote">No setup fees · No lock-in · Move between plans at any time</p>
+        <p class="hd-pricing__footnote">All prices exclude VAT. VAT is added at the standard rate.</p>
+        <p class="hd-pricing__footnote">No setup fees · No lock-in · Switch add-ons on or off at any time</p>
       </div>
     </section>
 
@@ -753,17 +755,17 @@
         <div class="hd-faq__list">
           <details class="hd-faq__item" open>
             <summary class="hd-faq__q">
-              <span class="hd-faq__q-text">What&rsquo;s included in PropertyFlow&rsquo;s free plan, and how does pricing work?</span>
+              <span class="hd-faq__q-text">What&rsquo;s included free on PropertyFlow, and how does pricing work?</span>
               <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
             </summary>
-            <p class="hd-faq__a">Free for up to 3 properties on your own channels: connect your Airbnb, Booking.com and Vrbo accounts, one inbox, one calendar, AI messaging, reminders. AI Cognito Pricing is on Premium.</p>
+            <p class="hd-faq__a">Free on your own Airbnb and Booking.com accounts, with as many properties as you want: one inbox, one calendar, AI messaging, automated guest messages, turnover tasks, reminders and reporting. You only pay for what you switch on: AI Cognito Pricing at £9.99 per property per month plus VAT, and 5% plus VAT on bookings from channels we list you on, including a Booking.com listing we create for you.</p>
           </details>
           <details class="hd-faq__item">
             <summary class="hd-faq__q">
-              <span class="hd-faq__q-text">What happens when I add more than 3 properties?</span>
+              <span class="hd-faq__q-text">Do I pay per property?</span>
               <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
             </summary>
-            <p class="hd-faq__a">A fourth property moves your account to Premium: £9.99 per property per month plus VAT on every property, so four properties is £39.96 plus VAT, with AI Cognito Pricing included.</p>
+            <p class="hd-faq__a">Not for the platform. Every property on your own Airbnb and Booking.com accounts is free. The only per-property charge is AI Cognito Pricing, £9.99 per property per month plus VAT, and only on the properties you switch it on for.</p>
           </details>
           <details class="hd-faq__item">
             <summary class="hd-faq__q">
@@ -794,13 +796,13 @@
     <section class="hd-section hd-cta2">
       <div class="hd-wrap hd-cta2__inner">
         <h2 class="hd-cta2__heading">Start free.<br>Scale when you're ready.</h2>
-        <p class="hd-cta2__desc">Add your first 3 properties at no cost on your own channels. No card required. Built and proven in Edinburgh, one of the UK&rsquo;s toughest licensing markets. Now live across the UK.</p>
-        <p class="hd-cta2__desc">Want more bookings? Switch to PropertyFlow channels. Want to build a management business? Apply to the Partner Programme.</p>
+        <p class="hd-cta2__desc">Add all your properties at no cost on your own channels. No card required. Built and proven in Edinburgh, one of the UK&rsquo;s toughest licensing markets. Now live across the UK.</p>
+        <p class="hd-cta2__desc">Want more bookings? Switch on PropertyFlow channels. Want to build a management business? Apply to the Partner Programme.</p>
         <div class="hd-cta2__actions">
           <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free <span aria-hidden="true">→</span></a>
           <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">Apply to the Partner Programme</a>
         </div>
-        <p class="hd-cta2__footnote">No setup fees · No lock-in · Move between plans at any time</p>
+        <p class="hd-cta2__footnote">No setup fees · No lock-in · Switch add-ons on or off at any time</p>
       </div>
     </section>
 
@@ -880,10 +882,11 @@
     <!-- JavaScript -->
 <script src="/js/home-dark.js?v=1"></script>
 <script src="/js/nav-dropdown.js"></script>
-<script src="/js/propertyflow.js?v=14"></script>
+<script src="/js/propertyflow.js?v=15"></script>
 <!-- HubSpot Tracking Code -->
-    <script src="/js/cookie-consent.js?v=3"></script>
+    <script src="/js/cookie-consent.js?v=5"></script>
     <script src="/js/meta-pixel.js"></script>
+    <script src="/js/analytics.js?v=3"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
 </html>
